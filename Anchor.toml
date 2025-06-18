@@ -1,0 +1,22 @@
+[toolchain]
+package_manager = "yarn"
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.devnet]
+rool_dice = "5AUHCWm4TzipCWK9H3EKx9JNccEA3rfNSUp4BCy2Zy2f"
+
+[programs.localnet]
+rool_dice = "5AUHCWm4TzipCWK9H3EKx9JNccEA3rfNSUp4BCy2Zy2f"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
